@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Desayuno: Tu Superpoder para el Éxito!</title>
+    <link rel="stylesheet" href="contenido.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>¡Desayuno: Tu Superpoder para el Éxito!</h1>
+            <p>Empieza tu día con energía y potencia tu mente.</p>
+            <button id="startButton" class="hero-button">¡Descubre sus Beneficios!</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="importanciaAcademica" class="info-section hidden">
+            <h2>🧠 Rendimiento Académico: ¡Desayuno es Clave!</h2>
+            <div class="card-grid">
+                <div class="info-card">
+                    <h3>Concentración y Memoria</h3>
+                    <p>Un desayuno nutritivo mejora tu capacidad de atención y retención de información.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Mejor Desempeño Escolar</h3>
+                    <p>Alimenta tu cerebro para pensar con claridad y resolver problemas eficientemente.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Menos Fatiga Mental</h3>
+                    <p>Evita el cansancio a media mañana y mantente activo durante tus clases.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Estado de Ánimo Positivo</h3>
+                    <p>Un buen desayuno reduce la irritabilidad y te ayuda a enfrentar el día con optimismo.</p>
+                </div>
+            </div>
+            <button class="toggle-button" data-target="beneficiosDiarios">Beneficios en tu Vida Diaria ➡️</button>
+        </section>
+
+        <section id="beneficiosDiarios" class="info-section hidden">
+            <h2>🍎 Beneficios en tu Vida Diaria</h2>
+            <div class="card-grid">
+                <div class="info-card">
+                    <h3>Energía Sostenida</h3>
+                    <p>Te proporciona la vitalidad necesaria para todas tus actividades diarias.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Control de Peso</h3>
+                    <p>Ayuda a regular el apetito y evita los antojos poco saludables.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Mejora el Metabolismo</h3>
+                    <p>Activa tu cuerpo y lo prepara para procesar los alimentos de manera eficiente.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Fortalece el Sistema Inmune</h3>
+                    <p>Un desayuno balanceado te ayuda a estar más resistente a enfermedades.</p>
+                </div>
+            </div>
+            <button class="toggle-button" data-target="ideasDesayuno">¡Ideas de Desayuno Deliciosas! ➡️</button>
+        </section>
+
+        <section id="ideasDesayuno" class="info-section hidden">
+            <h2>🍳 Ideas de Desayuno Deliciosas y Saludables</h2>
+            <div class="recipe-grid">
+                <div class="recipe-card">
+                    <h3>Bowl de Avena con Frutas</h3>
+                    <ul>
+                        <li>Avena cocida</li>
+                        <li>Frutas frescas (plátano, fresas, arándanos)</li>
+                        <li>Nueces o semillas</li>
+                        <li>Un toque de miel</li>
+                    </ul>
+                </div>
+                <div class="recipe-card">
+                    <h3>Tostadas con Aguacate y Huevo</h3>
+                    <ul>
+                        <li>Pan integral tostado</li>
+                        <li>Aguacate machacado</li>
+                        <li>Huevo cocido o revuelto</li>
+                        <li>Pizca de sal y pimienta</li>
+                    </ul>
+                </div>
+                <div class="recipe-card">
+                    <h3>Smoothie Energético</h3>
+                    <ul>
+                        <li>Leche (vegetal o animal)</li>
+                        <li>Espinacas (no se siente el sabor!)</li>
+                        <li>Frutas congeladas (mango, piña)</li>
+                        <li>Proteína en polvo (opcional)</li>
+                    </ul>
+                </div>
+            </div>
+            <button class="toggle-button" data-target="importanciaAcademica">⬅️ Volver a Beneficios Académicos</button>
+        </section>
+
+        <section id="ctaSection" class="cta-section hidden">
+            <h2>¡No te saltes el desayuno!</h2>
+            <p>Es el combustible que tu cuerpo y tu mente necesitan para brillar. ¡Hazlo parte de tu rutina diaria!</p>
+            <button id="resetButton" class="cta-button">¡Empezar de Nuevo!</button>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 El Poder del Desayuno. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="contenido.js"></script>
+</body>
+</html>
