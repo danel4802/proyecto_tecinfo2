@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+:root {
+    --color-primary: #FFD700; /* Dorado - color de maíz o huevos */
+    --color-secondary: #FF6347; /* Tomate - vibrante y energizante */
+    --color-tertiary: #9ACD32; /* Amarillo verdoso - color de vegetales frescos */
+    --color-background: #FFF8DC; /* Crema - suave y acogedor */
+    --color-text: #36454F; /* Gris oscuro - fácil de leer */
+    --color-card-bg: #FFFFFF;
+    --color-button-hover: #FF8C00; /* Naranja oscuro */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    overflow: hidden;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: bubble 15s infinite ease-in-out;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: -70px;
+    right: -70px;
+    width: 250px;
+    height: 250px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    animation: bubble 18s infinite reverse ease-in-out;
+}
+
+@keyframes bubble {
+    0% { transform: scale(0.8) translate(0, 0); opacity: 0.7; }
+    50% { transform: scale(1.2) translate(20px, -20px); opacity: 0.5; }
+    100% { transform: scale(0.8) translate(0, 0); opacity: 0.7; }
+}
+
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.hero p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+}
+
+.hero-button {
+    background-color: var(--color-text);
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.hero-button:hover {
+    background-color: var(--color-button-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Info Sections */
+.info-section {
+    background-color: var(--color-card-bg);
+    padding: 40px;
+    margin-top: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.6s ease-out;
+}
+
+.info-section.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.info-section h2 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 2.5em;
+    color: var(--color-secondary);
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.info-section h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--color-tertiary);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.card-grid, .recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.info-card, .recipe-card {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    border-left: 5px solid var(--color-primary);
+}
+
+.info-card:hover, .recipe-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.info-card h3, .recipe-card h3 {
+    color: var(--color-text);
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--color-secondary);
+    padding-bottom: 5px;
+}
+
+.info-card p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.recipe-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.recipe-card ul li {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.recipe-card ul li::before {
+    content: '✅';
+    position: absolute;
+    left: 0;
+    color: var(--color-tertiary);
+}
+
+/* Toggle Buttons */
+.toggle-button {
+    background-color: var(--color-tertiary);
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 40px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.toggle-button:hover {
+    background-color: #7CB342; /* Un verde un poco más oscuro */
+    transform: translateY(-2px);
+}
+
+/* Call to Action Section */
+.cta-section {
+    background: linear-gradient(to right, var(--color-secondary), var(--color-primary));
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+    margin-top: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.6s ease-out;
+}
+
+.cta-section.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.cta-section h2 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.cta-section p {
+    font-size: 1.4em;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    background-color: var(--color-text);
+    color: #fff;
+    padding: 18px 35px;
+    border: none;
+    border-radius: 35px;
+    font-size: 1.3em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.cta-button:hover {
+    background-color: #555;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Utility */
+.hidden {
+    display: none;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+    background-color: var(--color-text);
+    color: #fff;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .info-section h2 {
+        font-size: 1.8em;
+    }
+
+    .info-card h3, .recipe-card h3 {
+        font-size: 1.3em;
+    }
+
+    .info-card p, .recipe-card ul li {
+        font-size: 0.95em;
+    }
+
+    .card-grid, .recipe-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .toggle-button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    .cta-section h2 {
+        font-size: 2em;
+    }
+
+    .cta-section p {
+        font-size: 1.1em;
+    }
+
+    .cta-button {
+        font-size: 1.1em;
+        padding: 15px 25px;
+    }
+}
