@@ -1,0 +1,78 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif; /* Fuente moderna y legible */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* Un gris claro suave */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Para que el footer se quede abajo */
+}
+
+header {
+    background-color: #333; /* Un gris oscuro para el encabezado */
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+}
+
+main {
+    flex-grow: 1; /* Para que el main ocupe el espacio disponible */
+    padding: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quienes-somos-content p {
+    font-size: 1.1em;
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+/* Estilos del botón */
+.boton-pdf {
+    display: block; /* Para que ocupe todo el ancho disponible si es necesario */
+    width: fit-content; /* Se ajusta al contenido */
+    margin: 0 auto; /* Para centrar el botón */
+    padding: 15px 30px;
+    background-color: #ff6347; /* Rojo tomate */
+    color: white;
+    border: none;
+    border-radius: 8px; /* Bordes ligeramente redondeados */
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none; /* Por si en el futuro se cambia a un <a> */
+    text-align: center;
+}
+
+.boton-pdf:hover {
+    background-color: #e04a2d; /* Un rojo un poco más oscuro al pasar el ratón */
+    transform: translateY(-2px); /* Pequeño efecto de elevación */
+}
+
+.boton-pdf:active {
+    transform: translateY(0); /* Vuelve a su posición al hacer clic */
+    background-color: #c43c22;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem; /* Espacio antes del footer */
+}
